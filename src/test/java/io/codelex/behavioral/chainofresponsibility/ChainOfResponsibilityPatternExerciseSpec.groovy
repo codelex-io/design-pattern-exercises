@@ -29,7 +29,7 @@ class ChainOfResponsibilityPatternExerciseSpec extends Specification {
         and:
             call.handlers.size() == 2
             call.handlers[0] == 'answering-machine'
-            call.handlers[1] == 'forgot-password'
+            call.handlers[1] == 'first-level-support-operator'
     }
 
     def 'should process "technical problem" on answering machine & first level operator & technical support'() {
@@ -42,7 +42,7 @@ class ChainOfResponsibilityPatternExerciseSpec extends Specification {
         and:
             call.handlers.size() == 3
             call.handlers[0] == 'answering-machine'
-            call.handlers[1] == 'forgot-password'
+            call.handlers[1] == 'first-level-support-operator'
             call.handlers[2] == 'technical-support'
     }
 }
