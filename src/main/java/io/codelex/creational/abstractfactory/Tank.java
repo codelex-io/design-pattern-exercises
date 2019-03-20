@@ -6,14 +6,14 @@ import static io.codelex.creational.abstractfactory.Side.SOVIET;
 interface Tank {
     Side side();
 
-    class AlliedTank implements Soldier {
+    class AlliedTank implements Tank {
         @Override
         public Side side() {
             return ALLIED;
         }
     }
 
-    class SovietTank implements Soldier {
+    class SovietTank implements Tank {
         @Override
         public Side side() {
             return SOVIET;
