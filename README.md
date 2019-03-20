@@ -1,1 +1,1 @@
-# Design Pattern Exercises
+# Design Pattern Exercises by [codelex.io](https://codelex.io)
