@@ -18,10 +18,10 @@ class VisitorPatternExerciseSpec extends Specification {
             def slurper = new JsonSlurper()
         when:
             def json = slurper.parseText(exercise.asJson())
+            def cleanCodeBook = json.find { it.title == 'Clean Code' }
         then:
-            json[0].title == 'Clean Code'
-            json[0].isbn == '9780136083238'
-            json[0].price == 2500
+            cleanCodeBook.isbn == '9780136083238'
+            cleanCodeBook.price == 2500
     }
 
     def 'should print contents as xml'() {
