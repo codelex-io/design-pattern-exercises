@@ -29,9 +29,10 @@ class VisitorPatternExerciseSpec extends Specification {
             def slurper = new XmlSlurper()
         when:
             def xml = slurper.parseText(exercise.asXml())
+            def cleanCodeBook = xml.book.find { it.title == 'Clean Code' }
         then:
-            xml[0].title == 'Clean Code'
-            xml[0].isbn == '9780136083238'
-            xml[0].price == 2500
+            cleanCodeBook.title == 'Clean Code'
+            cleanCodeBook.isbn == '9780136083238'
+            cleanCodeBook.price == 2500
     }
 }
