@@ -12,11 +12,11 @@ class StrategyPatternExerciseSpec extends Specification {
         given:
             def soldier = new Soldier()
         when:
-            soldier.changeStrategy()
+            soldier.changeStrategy() //todo
         then:
             exercise.useSoldierForAttack(soldier) == HIT
         when:
-            soldier.changeStrategy()
+            soldier.changeStrategy() //todo
         then:
             exercise.useSoldierForAttack(soldier) == SHOOT
     }
